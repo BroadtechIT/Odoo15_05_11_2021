@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="choose_delivery_carrier_view_canadapost" model="ir.ui.view">
+        <field name="name">choose.delivery.carrier.form.inherit.canadapost</field>
+        <field name="model">choose.delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.choose_delivery_carrier_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='carrier_id']" position="after"> 
+                <field name="canadapost_shipping_date" attrs="{'invisible': [('delivery_type', '!=', 'syncoriacanadapost')], 'required': [('delivery_type', '=', 'syncoriacanadapost')]}"/>
+            </xpath>
+            <!-- <xpath expr="//group" position="inside">
+                <group>
+                    <field name="purolator_total_weight" attrs="{'invisible': [('carrier_id', '=', False),('delivery_type', '!=', 'purolator')]}"/>
+                    <field name="purolator_weight_unit" attrs="{'invisible': [('carrier_id', '=', False),('delivery_type', '!=', 'purolator')]}"/>
+                </group>
+            </xpath> -->
+            <xpath expr="//group[1]" position="after">
+                <group>
+                    <field name="canadapost_service_type" widget="radio" domain= "[('active','=',True)]" attrs="{'invisible': ['|',('carrier_id', '=', False),('delivery_type', '!=', 'syncoriacanadapost')]}"/>
+                    <!-- <field name="canadapost_get_service" widget="radio" invisible="True"/> -->
+                </group>
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <!--  <template id="assets_frontend_ext" inherit_id="website.assets_frontend" name="assets_frontend_ext">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/base_delivery_syncoria/static/src/js/widget.js"></script>
+            </xpath>
+        </template>
+ -->
+      
+    </data>
+</odoo>

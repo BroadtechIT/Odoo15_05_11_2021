@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+      <!--   <template id="delivery_canada_post.assets_frontend_ext" inherit_id="website.assets_frontend" name="assets_frontend_ext">
+            <xpath expr="." position="inside">
+                <link href="/delivery_canada_post/static/src/css/delivery_canada_post.css" rel="stylesheet" type="text/css"/>
+                <script type="text/javascript" src="/delivery_canada_post/static/src/js/widget.js"></script>
+            </xpath>
+        </template> -->
+
+        <template id="website_sale_delivery_inherit" inherit_id="website_sale_delivery.payment_delivery">
+            <xpath expr="//div[@id='delivery_method']" position="inside">
+                <div class="form-group">
+                    <label for="cn_services_id" class="control-label" id="cn_services_name">Canadapost Services</label>                                      
+                    <select name="cn_services_id" class="form-control link-style" id="cn_services_id" style="display:none">
+                        <t t-foreach='canadapost_services' t-as="service">
+                            <option t-esc='service.name' t-att-value='service.id'/>
+                        </t>
+                    </select>
+                </div>
+                <div class="card" id="cnpost_card" >
+                    <div id="cnpost_table" class="card-body">
+                        <div id="cnpost_table_load">
+                        </div>
+                        <table id="estimate_table" cellspacing="0" cellpadding="0" border="0"  style="border-collapse:collapse;">
+                            <tbody>
+                                <tr style="border-bottom:1pt solid black;">
+                                    <th align="left" scope="col" style="min-width:120px; height:20px;background-color:#274898;color:white;">Deliver By</th>
+                                    <th align="left" scope="col" style="min-width:120px;height:20px;background-color:#274898;color:white;">Delivery Service</th>
+                                    <th class="thcenter" align="center" scope="col" style="height:20px;width:350px;background-color:#274898;;color:white;text-align:center">Estimated Cost</th>
+                                    <th align="left" valign="middle" scope="col" style="display:none;"></th>
+                                    <th align="left" valign="middle" scope="col" style="height:20px;width:350px;background-color:#274898;;color:white;">&#160;</th>
+                                </tr>
+                         </tbody>
+                    </table>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

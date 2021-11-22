@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+      <record id="res_partner_laurie_poiret" model="res.partner">
+            <field name="name">Laurie Poiret</field>
+            <field name="street">66 Chancellors Cir</field>
+            <field name="city">Winnipeg</field>
+            <field name="zip">R3T 2N2</field>
+            <field name="state_id" ref="base.state_ca_mb"/>
+            <field name="country_id" ref="base.ca"/>
+            <field name="phone">+1-800-432-1960</field>
+            <field name="email">laurie.poiret@example.com</field>
+        </record>
+        <record id="res_partner_abraham_lincoln" model="res.partner">
+            <field name="name">Abraham Lincoln</field>
+            <field name="street">77 Massachusetts Avenue</field>
+            <field name="city">Cambridge</field>
+            <field name="zip">02139</field>
+            <field name="state_id" ref="base.state_us_34"/>
+            <field name="country_id" ref="base.us"/>
+            <field name="phone">+1 617-253-1000</field>
+            <field name="email">abraham.linkcoln@example.com</field>
+        </record>
+        <record id="res_partner_emilia_clarke" model="res.partner">
+            <field name="name">Emilia Clarke</field>
+            <field name="street">21 Lower Kent Ridge Rd</field>
+            <field name="city">Louvain-la-Neuve</field>
+            <field name="zip">119077</field>
+            <field name="country_id" ref="base.sg"/>
+            <field name="phone">+65 6516 6666</field>
+            <field name="email">emilia.clarke@example.com</field>
+        </record>
+    </data>
+</odoo>
